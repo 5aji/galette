@@ -310,7 +310,7 @@ fn check_aux(field: &Option<gal::Term>, olmc: &OLMC, suffix: OutputSuffix) -> Re
 // GALxV8 analysis - determine which mode to run the chip in.
 
 fn set_mode(gal: &mut GAL, blueprint: &Blueprint) {
-    gal.set_mode(analyse_mode(&blueprint.olmcs));
+    gal.set_mode(Mode::Registered);
 }
 
 fn analyse_mode(olmcs: &[OLMC]) -> Mode {
